@@ -1,0 +1,301 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: 'Courier New', monospace;
+}
+
+/* Corpo */
+body {
+    background: linear-gradient(to bottom right, #e8f5e9, #a5d6a7);
+    color: #333;
+    /*line-height: 1.6;*/
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(56, 142, 60, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10; /* Para ficar acima do vídeo */
+}
+
+#titulo-principal {
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.links-header {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.links-header:hover {
+    background-color: #66bb6a;
+    transform: translateY(-2px);
+}
+
+#menu-links-icons {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-links {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #menu-links-icons.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(56, 142, 60, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        gap: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Seção Principal */
+#section-01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+    height: auto;
+}
+
+/* Estilo do lado esquerdo */
+#lado-esquerdo {
+    flex: 1;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Texto sobreposto */
+#pequeno-texto {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima da imagem de fundo */
+    text-align: center; /* Centraliza o texto */
+}
+
+#titulo-chamativo {
+    font-size: 2.5rem;
+    color: #388e3c;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease;
+}
+
+#texto-chamativo {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+/* Estilo do botão */
+#botao-section-01 {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1.4s ease;
+}
+
+#butao-chamativo {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    color: #ffffff;
+    background-color: #388e3c;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Para o efeito de hover */
+    z-index: 2; /* Garante que o botão fique acima da imagem de fundo */
+}
+
+#butao-chamativo:hover {
+    background-color: #66bb6a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Vídeo */
+#lado-direito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-chamativo {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#video-chamativo:hover {
+    transform: scale(1.02);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #section-01 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #titulo-chamativo {
+        font-size: 1.8rem;
+    }
+
+    #texto-chamativo {
+        font-size: 1rem;
+    }
+
+    #video-chamativo {
+        max-width: 100%;
+    }
+}
+
+/* Estilo geral da seção 02 */
+#section-02 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #b2e6b3, #4caf50); /* Gradiente de verde claro para verde forte */
+    padding: 2rem; /* Espaçamento interno */
+    position: relative; /* Para efeito de scroll */
+}
+
+/* Estilo do título da seção */
+#titulo-section-02 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem; /* Espaçamento abaixo do título */
+    animation: fadeIn 1s ease-in; /* Animação de aparecimento */
+}
+
+#titulo-nosso-produto {
+    font-size: 3rem; /* Tamanho maior para o título */
+    font-weight: bold; /* Destaque no peso da fonte */
+    color: #006400; /* Cor do texto em verde escuro */
+    text-align: center; /* Centraliza o texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra leve no texto */
+}
+
+/* Animação para o título */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Animação de entrada */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo da seção de fotos */
+#fotos-section-02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: auto; /* Rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Snap para fotos */
+    padding: 1rem; /* Espaçamento interno */
+}
+
+/* Estilo das fotos dos equipamentos */
+#fotos-section-02 #fotos-equipamento {
+    position: sticky;
+    flex-shrink: 0;
+    object-fit: cover;
+    scroll-behavior: smooth; /* Rolagem suave */
+    /*width: auto; /* Mantém a largura original */*/
+    height: 100%; /* Altura segue o contêiner pai */
+}
+
+/* Estilo das fotos individuais */
+.fotos-equipamento {
+    height: 40vh; /* Altura da foto */
+    width: 30vw; /* Largura da foto */
+    margin: 1rem; /* Margem ao redor da foto */
+    border-radius: 16px; /* Cantos arredondados */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    background-color: #ffffff; /* Fundo branco para as imagens */
+    border: 2px solid #a8e6cf; /* Borda verde claro */
+    scroll-snap-align: start; /* Alinhamento do snap */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse nas fotos */
+.fotos-equipamento:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+}
+
+/* Animação das fotos ao entrar na visualização */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Animação de entrada da direita */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplica animação a cada foto individual */
+#fotos-section-02 .fotos-equipamento {
+    animation: slideIn 0.5s ease forwards; /* Aplica animação na entrada */
+}
+
+/* Aumenta o efeito da rolagem */
+#fotos-section-02 {
+    animation: slideIn 0.5s ease forwards; /* Animação de entrada na seção */
+}

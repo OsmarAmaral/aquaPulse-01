@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/createAccountCss.css">
+    <title>createAccount</title>
+</head>
+<body>
+    <form>
+        <div class="inputs">
+            <label for="nome-usuario">Nome</label>
+            <input id="nome-usuario" type="text" minlength="3" required>
+        </div>
+        <div class="inputs">
+            <label for="email-usuario">Email</label>
+            <input id="email-usuario" type="email" required>
+        </div>
+        <div class="inputs">
+            <label for="senha-usuario">Senha</label>
+            <input id="senha-usuario" type="password" minlength="8" required>
+        </div>
+        <div class="inputs">
+            <label for="confirmarSenha">Confirmar Senha</label>
+            <input id="confirmarSenha" type="password" minlength="8" required>
+        </div>
+        <div id="butao">
+        <button type="button" onclick="verificar()">Confirmar</button>
+        </div>
+    </form>
+    <script>
+        function verificar() {
+            var senha = document.getElementById('senha-usuario').value;
+            var confSenha = document.getElementById('confirmarSenha').value;
+            if(senha == confSenha && senha !="") {
+                alert("Sucesso");
+            }else{
+                alert("Error");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+/* Corpo */
+body {
+    background: linear-gradient(to bottom right, #e8f5e9, #a5d6a7);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(56, 142, 60, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10; /* Para ficar acima do vídeo */
+}
+
+#titulo-principal {
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.links-header {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.links-header:hover {
+    background-color: #66bb6a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    #menu-links {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #menu-links-icons.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(56, 142, 60, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        gap: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

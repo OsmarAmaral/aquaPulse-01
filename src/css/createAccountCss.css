@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'courier new';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    width: 16rem;
+}
+
+.inputs {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#butao {
+    display: flex;
+    justify-content: flex-end;
+    width: 14rem;
+}
+
+input {
+    width: 14rem;
+    height: 1.3rem;
+    outline: 0;
+}
+
+button {
+    height: 1.3rem;
+}
